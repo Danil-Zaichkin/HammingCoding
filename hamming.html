@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hamming Code</title>
+    <script src="code.js"></script>
+    <script>
+        /*function code() {
+            let message = document.getElementById("inputData").value
+            let inputDigits = message.split('')
+            for (let i = 0; i < inputDigits.length; i++) {
+                inputDigits[i] = inputDigits[i] * 1
+            }
+            inputDigits.push((inputDigits[0] + inputDigits[2] + inputDigits[3]) % 2)
+            inputDigits.push((inputDigits[0] + inputDigits[1] + inputDigits[3]) % 2)
+            inputDigits.push((inputDigits[1] + inputDigits[2] + inputDigits[3]) % 2)
+            document.getElementById("codedData").value = inputDigits.join('')
+        }
+        function decode() {
+            let codedMessage = document.getElementById('codedData').value
+            document.getElementById('decodedData').value = codedMessage
+        }
+
+
+        function countCodeBits(m) {
+            let k = 0
+            while (Math.pow(2, k) < m + k + 1) {
+                k++
+            }
+            return k
+        }
+
+        function isDegreeOfTwo(n) {
+            while (n % 2 === 0) {
+                n /= 2
+            }
+            return n === 1;
+
+        }
+
+        function code() {
+            let data = document.getElementById("inputData").value.split('')
+            for (let i = 0; i < data.length; i++) {
+                data[i] = parseInt(data[i])
+            }
+            let codedData = new Array(data.length + countCodeBits(data.length))
+            let count = 0;
+            for (let i = 1; i < codedData.length + 1; i ++) {
+                if (isDegreeOfTwo(i))
+                    codedData[i-1] = 0
+                else {
+                    codedData[i-1] = data[count]
+                    count++
+                }
+            }
+            alert(codedData)
+        }
+        */
+    </script>
+</head>
+<body>
+    <p><input type="text" id="inputData"> input data</p>
+    <p><input type="button" onclick="code()" value="code"></p>
+    <p><input type="text" id="codedData"> coded data</p>
+    <p><input type="button" onclick="decode()" value="decode"></p>
+    <p><input type="text" id="decodedData"> decoded data</p>
+</body>
+</html>
